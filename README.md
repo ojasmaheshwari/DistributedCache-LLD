@@ -1,5 +1,7 @@
 # Distributed Cache - Design Explanation
 
+<img width="1121" height="651" alt="design" src="https://github.com/user-attachments/assets/afd3d274-675d-4638-a667-bca746ef4e2d" />
+
 ## How data is distributed across nodes
 
 A `NodeSelectionStrategy` determines which node owns a given key. The current implementation (`SimpleModuloSelectionStrategy`) computes the ASCII sum of the key and takes `mod N` (where N = number of nodes) to pick a node index. This ensures the same key always maps to the same node.
